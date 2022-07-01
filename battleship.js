@@ -33,7 +33,14 @@ var view = {
             return false;  
         }
     }
-
+    isSunk: function(ship) {
+        for (var i = 0; i < this.shipLength; i++) {
+            if (ship.hits[i] !== "hit") {
+                return false;
+            }
+        }
+        return true;
+    }
  };
 view.displayMiss("00");
 view.displayHit("34");
