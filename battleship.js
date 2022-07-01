@@ -25,13 +25,12 @@ var view = {
     fire: function(guess) {
         for (var i =0; i< this.numShips; i++) {
             var ship = this.ships[i];
-            var locations = ship.locations;
-            var index = locations.indexOf(guess);
+            var index = ship.locations.indexOf(guess);
             if (index >=0) {
                 ship.hits[index] = "hit";
                 return true;
             }
-            return false;
+            return false;  
         }
     }
 
